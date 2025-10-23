@@ -1,12 +1,14 @@
 <html>
+
 <head>
     <title>Exponenciar numero</title>
 </head>
+
 <body>
     <h1>Calculadora de Potencias</h1>
 
     <input type="number" id="base" placeholder="Introduce la base">
-    <input type="number" id="exponente" placeholder="Introduce el exponente">
+    <input type="number" id="exponente" placeholder="Introduce el exponente" min="1">
     <input type="button" id="calcular" value="Calcular Potencia">
     <br><br>
     <div id="resultado"></div>
@@ -21,7 +23,6 @@
             let resultadoDiv = document.getElementById("resultado");
 
             if (!isNaN(base) && !isNaN(exponente)) {
-                //let resultado = Math.pow(base, exponente);
                 let resultado = 1;
                 for (let i = 1; i <= exponente; i++) {
                     resultado *= base;
@@ -36,4 +37,5 @@
         }
     </script>
 </body>
+
 </html>
