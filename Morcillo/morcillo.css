@@ -1,0 +1,29 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(66, 30, 4);
+    background: linear-gradient(0deg, #caa291 0%, #caa291 24%, #ffffff 100%);
+}
+
+ol li:first-child {
+  text-transform: uppercase; /* Pone la primera letra del primer li en mayúsculas */
+}
+
+ul li:first-child {
+  color: purple;   
+  font-size: 30px;
+}
+
+img {
+    border: 15px solid #4c2c6c;
+}
+
+header {
+    height: 150px;
+    background-image: url(pie.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+}   

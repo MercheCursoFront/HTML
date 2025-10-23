@@ -1,0 +1,64 @@
+<html>
+<head>
+    
+    <title>Sample HTML Document</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+</head>
+<body>
+    <input type="text" id="nombre" placeholder="Pon Nombre">
+    <input type="text" id="apellido" placeholder="Pon Apellido">
+    <input type="button" id="concatenar" value="Concatenar">
+    <input type="text" id="resultado" placeholder="Resultado">
+    <br><br>
+    <input type="button" id="sumarLista" value="Añadir a la lista">
+    <br><br>
+    <div>
+        <ul id="listaNombres"></ul>
+    </div>
+
+    <script>
+        let boton = document.getElementById("concatenar");
+        boton.addEventListener("click", concatenarNombres);
+
+        function concatenarNombres() {
+            let nombre = document.getElementById("nombre").value;
+            let apellido = document.getElementById("apellido").value;
+
+            if ((nombre.trim() !== "") && (apellido.trim() !== "")) {    
+                let resultado = nombre + " " + apellido ;
+                document.getElementById("resultado").value = resultado;
+                document.getElementById("nombre").value = "";
+                document.getElementById("apellido").value = "";
+
+                botonAñadir = document.getElementById("sumarLista");   
+                botonAñadir.addEventListener("click", añadirALista);
+
+            } else {
+                alert("Por favor, introduce un nombre y apellido válidos.");    
+            }
+        }
+
+        function añadirALista() {
+            let nombreCompleto = document.getElementById("resultado").value;
+
+            if (nombreCompleto.trim() !== "") {             
+                let lista = document.getElementById("listaNombres");
+                let nuevoElemento = document.createElement("li");
+                nuevoElemento.textContent = nombreCompleto + "(" + nombreCompleto.length + ")";
+                lista.appendChild(nuevoElemento);
+
+                document.getElementById("resultado").value = "";
+
+                botonAñadir.removeEventListener("click", añadirALista);
+
+            } else {
+                alert("Por favor, concatena un nombre y apellido antes de añadir a la lista.");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+

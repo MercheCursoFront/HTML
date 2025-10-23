@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Exponenciar numero</title>
+</head>
+<body>
+    <h1>Calculadora de Potencias</h1>
+
+    <input type="number" id="base" placeholder="Introduce la base">
+    <input type="number" id="exponente" placeholder="Introduce el exponente">
+    <input type="button" id="calcular" value="Calcular Potencia">
+    <br><br>
+    <div id="resultado"></div>
+
+    <script>
+        let boton = document.getElementById("calcular");
+        boton.addEventListener("click", calcularPotencia);
+
+        function calcularPotencia() {
+            let base = parseFloat(document.getElementById("base").value);
+            let exponente = parseInt(document.getElementById("exponente").value);
+            let resultadoDiv = document.getElementById("resultado");
+
+            if (!isNaN(base) && !isNaN(exponente)) {
+                //let resultado = Math.pow(base, exponente);
+                let resultado = 1;
+                for (let i = 1; i <= exponente; i++) {
+                    resultado *= base;
+                }
+                resultadoDiv.textContent = "El resultado de " + base + " elevado a " + exponente + " es: " + resultado;
+
+                document.getElementById("base").value = "";
+                document.getElementById("exponente").value = "";
+            } else {
+                alert("Por favor, introduce valores numéricos válidos para la base y el exponente.");
+            }
+        }
+    </script>
+</body>
+</html>

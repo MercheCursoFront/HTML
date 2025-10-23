@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Morcillo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='morcillo.css'>
+</head>
+<body>
+    <header>
+        <div style="float: left; width: 15%" >
+            <img src="Morcillo.jpg" alt="Imagen de Morcillo" style="width:100px;height:auto;">
+        </div>
+        <div style="float: left; width: 85%">
+            <h1>Alimentación Morcillo</h1>
+        </div>
+    </header>
+<br>
+    <h2 style="text-align: center;">Arroz a la Cubana</h2>
+<br>
+<section>
+    <h2>Ingredientes</h2>
+
+    <ul>
+        <li>200 g de arroz</li>
+        <li>2 huevos</li>
+        <li>2 plátanos maduros</li>
+        <li>Salsa de tomate</li>
+        <li>Aceite de oliva</li>
+        <li>Sal al gusto</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Instrucciones</h2>
+    <ol>
+        <li>Cocina el arroz en agua con sal hasta que esté tierno. Escurre y reserva.</li>
+        <li>Fríe los huevos en una sartén con un poco de aceite hasta que las claras estén firmes y las yemas líquidas.</li>
+        <li>En otra sartén, fríe los plátanos cortados en rodajas hasta que estén dorados.</li>
+        <li>Calienta la salsa de tomate en una cacerola pequeña.</li>
+        <li>Para servir, coloca una porción de arroz en el plato, añade un huevo frito encima, acompaña con las rodajas de plátano frito y vierte la salsa de tomate al gusto.</li>
+    </ol>
+</section>
+
+<form action="/submit_recipe" method="post">
+    <h2>Date de alta para recibir mas recetas como esta</h2>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" min="18" max="190" required><br><br>
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña" name="contraseña" required><br><br>
+    <input type="submit" value="Enviar">
+</form>
+
+
+    <footer>
+        <p style="text-align: center;">© 2025 Morcillosa. C/ Embutido, 89</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Sample HTML Document</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Ejemplo JavaSript</h1>
+
+    <input type="text" id="entrada" placeholder="Escribe numero">">
+    <input type="button" id="boton">Pulsar</input>
+    
+    <script>
+        console.log("Hello, World!");
+        let nombre = "Juan";
+        console.log("Mi nombre es " + nombre);
+        document.write("Mi nombre es " + nombre +"<br>");
+        let suma=0;
+
+        for(let i = 1; i < 1001; i++) {
+
+            if(i % 2 === 0) {
+                suma += i;
+            }
+        }
+        document.write("<br>La suma de los pares de 1 a 1000 es: " + suma);
+
+        suma = 0;
+        let contador = 0;
+        let valorMedio = 0;
+
+        for(let i = 1; i < 102; i++) {
+
+            if(i % 2 !== 0) {
+                contador++;
+                suma += i;
+            }
+        }
+
+        valorMedio = suma / contador;
+        document.write("<br>El promedio de los impares del 1 al 102 es: " + valorMedio);
+
+        function Suma(...numeros) {
+             // 'numeros' ahora es un arreglo con todos los argumentos pasados
+            let suma = 0;
+            for (let i = 0; i < numeros.length; i++) {
+                suma += numeros[i];
+            }
+            return suma;
+        }
+
+        document.write("<br>La suma de 1,2,3 es: " + Suma(1, 2, 3));      
+
+    </script>       
+</body>
+</html>
